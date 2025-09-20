@@ -1,0 +1,241 @@
+/* === Futuristic Dark Mode Base === */
+body, .zinc-bg {
+  background: linear-gradient(135deg, #0F172A 0%, #1e293b 100%);
+  min-height: 100vh;
+  color: #F1F5F9;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+/* === Glassmorphism Panels === */
+.glassmorphism-panel,
+.chat-glassmorph,
+.sidebar-glassmorph,
+.input-glassmorph {
+  background: rgba(30, 41, 59, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(16, 185, 129, 0.08), 0 2px 8px #0F172A80;
+  backdrop-filter: blur(18px) saturate(160%);
+  border-radius: 24px;
+  border: 1.5px solid rgba(147, 51, 234, 0.12);
+  transition: box-shadow 0.3s, background 0.3s;
+}
+
+/* === Sidebar === */
+.sidebar-glassmorph {
+  min-width: 250px;
+  max-width: 320px;
+  width: 300px;
+  height: 100vh;
+  position: relative;
+  z-index: 20;
+  border-right: 2px solid rgba(37,99,235,0.12);
+  border-radius: 0 32px 32px 0;
+  transition: margin-left 0.3s;
+  background: rgba(15, 23, 42, 0.92);
+  box-shadow: 0 8px 32px 0 #2563EB33, 0 2px 16px #9333EA33 inset;
+}
+
+/* === Chat Window === */
+.chat-glassmorph {
+  background: rgba(30, 41, 59, 0.7);
+  box-shadow: 0 8px 32px 0 #2563EB33, 0 2px 8px #9333EA33;
+  border-radius: 32px 0 0 32px;
+  margin: 24px 0 24px 0;
+  transition: box-shadow 0.3s;
+}
+
+/* === Input Area === */
+.input-glassmorph {
+  background: rgba(30, 41, 59, 0.92);
+  box-shadow: 0 2px 16px 0 #2563EB22 inset;
+  border-radius: 0 0 32px 0;
+}
+
+/* === Chat Bubbles === */
+.user-bubble, .chat-bubble-3d.bubble-user {
+  background: linear-gradient(135deg, #2563EB 60%, #1e40af 100%);
+  color: #F1F5F9;
+  border-radius: 18px 18px 4px 18px;
+  box-shadow: 0 2px 12px #2563EB55, 0 1px 8px #0F172A33;
+  border: 2px solid #2563EB;
+  animation: bubbleIn 0.3s;
+  font-weight: 500;
+  font-size: 1.08rem;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.ai-bubble-light, .ai-bubble-dark, .chat-bubble-3d.bubble-ai {
+  background: linear-gradient(135deg, #9333EA 60%, #6d28d9 100%);
+  color: #F1F5F9;
+  border-radius: 18px 18px 18px 4px;
+  box-shadow: 0 2px 12px #9333EA55, 0 1px 8px #0F172A33;
+  border: 2px solid #9333EA;
+  animation: bubbleIn 0.3s;
+  font-weight: 500;
+  font-size: 1.08rem;
+  transition: box-shadow 0.2s, border 0.2s;
+}
+.chat-bubble-3d:hover {
+  box-shadow: 0 0 32px #2563EB, 0 0 8px #9333EA inset, 0 2px 8px #0F172A80;
+  border-color: #10B981;
+  transform: scale(1.03) translateY(-2px);
+}
+
+/* === Buttons === */
+.neumorph-btn, .neumorph-btn-small, .neumorph-btn-glass, .classic-3d-btn {
+  background: linear-gradient(90deg, #2563EB 0%, #1e40af 100%);
+  color: #F1F5F9;
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px #2563EB55, 0 2px 8px #0F172A80;
+  font-weight: bold;
+  padding: 0.7rem 2.2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.2s, background 0.2s, color 0.2s;
+  outline: none;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+.neumorph-btn-small {
+  padding: 0.4rem 1.1rem;
+  font-size: 1.2rem;
+  border-radius: 14px;
+}
+.neumorph-btn-glass {
+  background: rgba(37,99,235,0.18);
+  color: #2563EB;
+  border: 1.5px solid #2563EB;
+  box-shadow: 0 2px 8px #2563EB55, 0 1px 4px #0F172A80;
+  font-size: 1rem;
+}
+.neumorph-btn:active, .neumorph-btn-small:active, .neumorph-btn-glass:active {
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 0 2px 8px #2563EB55;
+}
+.neumorph-btn:hover, .neumorph-btn-small:hover, .neumorph-btn-glass:hover, .classic-3d-btn:hover {
+  background: linear-gradient(90deg, #2563EB 0%, #9333EA 100%);
+  color: #10B981;
+  box-shadow: 0 0 24px #2563EB, 0 0 8px #9333EA inset;
+}
+
+/* Success/Accent */
+.success {
+  color: #10B981 !important;
+}
+.accent {
+  color: #9333EA !important;
+}
+
+/* === Typography === */
+body, .zinc-bg, .main-gradient-light, .main-gradient-dark {
+  color: #F1F5F9;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+.neon-text, .neon-text-glow {
+  color: #2563EB;
+  text-shadow: 0 0 8px #2563EB, 0 0 2px #9333EA;
+}
+.neon-text-glow {
+  color: #9333EA;
+  text-shadow: 0 0 24px #9333EA, 0 0 2px #2563EB;
+}
+.holo-icon {
+  color: #2563EB;
+  filter: drop-shadow(0 0 8px #2563EB) drop-shadow(0 0 2px #9333EA);
+  font-size: 1.2em;
+  vertical-align: middle;
+  transition: color 0.2s, filter 0.2s;
+}
+
+/* === Sidebar Chat Item === */
+.sidebar-chat-item {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border-radius: 14px;
+  margin-bottom: 0.3rem;
+  background: rgba(37,99,235,0.08);
+  color: #F1F5F9;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px #2563EB33;
+}
+.sidebar-chat-item:hover {
+  background: linear-gradient(90deg, #2563EB 0%, #9333EA 100%);
+  color: #10B981;
+  transform: scale(1.04);
+  box-shadow: 0 0 16px #2563EB, 0 0 2px #9333EA;
+}
+.sidebar-chat-active {
+  background: linear-gradient(90deg, #2563EB 0%, #9333EA 100%);
+  color: #10B981;
+  font-weight: bold;
+  box-shadow: 0 0 16px #2563EB, 0 0 2px #9333EA;
+  transform: scale(1.06);
+}
+
+/* === Input === */
+.neumorph-input {
+  background: #1e293b;
+  color: #F1F5F9;
+  border-radius: 16px;
+  border: none;
+  box-shadow: 4px 4px 16px #0F172A, -4px -4px 16px #1e293b;
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+  outline: none;
+  margin-bottom: 0.5rem;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+.neumorph-input:focus {
+  box-shadow: 0 0 0 3px #2563EB, 4px 4px 16px #0F172A, -4px -4px 16px #1e293b;
+  background: #1e293bee;
+}
+
+/* === Theme Toggle Button (top-right) === */
+.theme-toggle-btn {
+  position: fixed;
+  z-index: 50;
+  background: #1e293b;
+  color: #2563EB;
+  border: none;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  font-size: 2rem;
+  box-shadow: 0 0 16px #2563EB, 0 0 4px #9333EA inset;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s;
+  top: 24px;
+  right: 24px;
+  left: auto;
+  bottom: auto;
+}
+.theme-toggle-btn:hover { background: #2563EB; color: #F1F5F9; box-shadow: 0 0 32px #9333EA; }
+
+/* === Animations === */
+@keyframes bubbleIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.95);}
+  to { opacity: 1; transform: translateY(0) scale(1);}
+}
+.fade-in {
+  animation: fadeIn 0.7s;
+}
+@keyframes fadeIn {
+  from { opacity: 0;}
+  to { opacity: 1;}
+}
+
+/* === Scrollbar Styling === */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(120deg, #2563EB 0%, #9333EA 100%);
+  border-radius: 8px;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background: #1e293b;
+}
